@@ -3,12 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeGraf : MonoBehaviour
+public class NPC : MonoBehaviour
 {
     [SerializeField] GameM GameM;
-    [SerializeField] Material material;
-    [SerializeField] Texture [] boards;
-
+    // Start is called before the first frame update
     private void OnEnable()
     {
         GameM.onRoundEnd += Round_onRoundEnd;
@@ -21,6 +19,13 @@ public class ChangeGraf : MonoBehaviour
 
     private void Round_onRoundEnd(object sender, int round)
     {
-        material.mainTexture = boards[round];
+        
     }
+
+    private void PlaySound()
+    {
+
+    }
+
+    // Update is called once per frame
 }
