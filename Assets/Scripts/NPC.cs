@@ -5,26 +5,28 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    [SerializeField] GameM GameM;
+    [SerializeField] ChangeGraf grafs;
+    [SerializeField] GameM gm;
+    int count;
     // Start is called before the first frame update
     private void OnEnable()
     {
-        GameM.onRoundEnd += Round_onRoundEnd;
+        gm.talk += Talk;
     }
 
     private void OnDisable()
     {
-        GameM.onRoundEnd -= Round_onRoundEnd;
+        gm.talk -= Talk;
     }
 
-    private void Round_onRoundEnd(object sender, int round)
+    private void Talk (object sender, GameObject npc)
     {
-        
+        PlaySound()
     }
 
     private void PlaySound()
     {
-
+        Debug.Log()
     }
 
     // Update is called once per frame
