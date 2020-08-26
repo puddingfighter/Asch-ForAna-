@@ -3,31 +3,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public class Npc: MonoBehaviour
 {
-    [SerializeField] ChangeGraf grafs;
-    [SerializeField] GameM gm;
-    int count;
-    // Start is called before the first frame update
-    private void OnEnable()
+    
+    [SerializeField] AudioClip[] answers;
+    AudioSource aSource;
+    bool isTalking = false;
+    float timer = 0;
+
+
+    private void Start()
     {
-        gm.talk += Talk;
+        aSource = GetComponent<AudioSource>();
+    }
+    public void Speak(int answer, bool lies,int lie)
+    {
+        Debug.Log(name + answer);
+        if (!isTalking)
+        {
+            if (lies == true)
+            {
+                //SndManager.instance.PlaySound(answers[answer]);
+
+                aSource.clip = answers[answer];
+                aSource.Play();
+                isTalking = true;
+                Debug.Log(answer);
+            }
+            else
+            {
+                Debug.Log(lie);
+            }
+        }
+
+    }
+    private void Update()
+    {
+
+        if(isTalking)
+        {
+            timer += Time.deltaTime;
+
+           if(timer +5 > aSource.clip.length)
+           {
+                NpcManager.instance.Idxcounter();
+           }
+
+        }
     }
 
-    private void OnDisable()
-    {
-        gm.talk -= Talk;
-    }
 
-    private void Talk (object sender, GameObject npc)
-    {
-        PlaySound()
-    }
-
-    private void PlaySound()
-    {
-        Debug.Log()
-    }
-
-    // Update is called once per frame
 }
