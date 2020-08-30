@@ -9,7 +9,11 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: LiberationSans SDF Material
   m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+<<<<<<< HEAD
   m_ShaderKeywords: OUTLINE_ON UNDERLAY_ON
+=======
+  m_ShaderKeywords: 
+>>>>>>> 66994dd78c6a73b609a665ae2ecc2017bbaef877
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -30,11 +34,19 @@ Material:
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
     - _OutlineSoftness: 0
+<<<<<<< HEAD
     - _OutlineWidth: 0.094
     - _PerspectiveFilter: 0.875
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 1
     - _ScaleRatioC: 0.48978567
+=======
+    - _OutlineWidth: 0
+    - _PerspectiveFilter: 0.875
+    - _ScaleRatioA: 0.9
+    - _ScaleRatioB: 1
+    - _ScaleRatioC: 0.73125
+>>>>>>> 66994dd78c6a73b609a665ae2ecc2017bbaef877
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -46,10 +58,17 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 1024
     - _TextureWidth: 1024
+<<<<<<< HEAD
     - _UnderlayDilate: 0.14
     - _UnderlayOffsetX: -1
     - _UnderlayOffsetY: -1
     - _UnderlaySoftness: 0.353
+=======
+    - _UnderlayDilate: 0
+    - _UnderlayOffsetX: 0
+    - _UnderlayOffsetY: 0
+    - _UnderlaySoftness: 0
+>>>>>>> 66994dd78c6a73b609a665ae2ecc2017bbaef877
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
@@ -7798,7 +7817,10 @@ Texture2D:
   m_TextureFormat: 1
   m_MipCount: 1
   m_IsReadable: 0
+<<<<<<< HEAD
   m_IgnoreMasterTextureLimit: 0
+=======
+>>>>>>> 66994dd78c6a73b609a665ae2ecc2017bbaef877
   m_StreamingMipmaps: 0
   m_StreamingMipmapsPriority: -92
   m_AlphaIsTransparency: 0
